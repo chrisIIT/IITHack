@@ -53,7 +53,7 @@ main.on('click', 'select', function(e) {
 
 main.on('click', 'down', function(e) {
   var card = new UI.Card();
-  card.title('A Card');
+  card.title('Chris liked booty');
   card.subtitle('Is a Window');
   card.body('The simplest window type in Pebble.js.');
   card.show();
