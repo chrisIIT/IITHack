@@ -2220,6 +2220,7 @@ containing a value of this type.
         public static final int always=0x7f0c0032;
         public static final int beginning=0x7f0c0030;
         public static final int bottom=0x7f0c001c;
+        public static final int button=0x7f0c0079;
         public static final int buttonPanel=0x7f0c0044;
         public static final int cancel_action=0x7f0c007b;
         public static final int center=0x7f0c001d;
@@ -2268,7 +2269,6 @@ containing a value of this type.
         public static final int listMode=0x7f0c000b;
         public static final int list_item=0x7f0c0041;
         public static final int locID=0x7f0c006e;
-        public static final int loginButton=0x7f0c0079;
         public static final int media_actions=0x7f0c007d;
         public static final int middle=0x7f0c0031;
         public static final int mini=0x7f0c002f;
