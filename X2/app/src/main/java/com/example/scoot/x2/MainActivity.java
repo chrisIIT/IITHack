@@ -29,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
 //        });
     }
 
+    public void addNewEvent(View v)
+    {
+        if (v.getId() == R.id.bID) //replace bID with the plus button
+        {
+            Intent i = new Intent(MainActivity.this, Create.class);
+            startActivity(i);
+        }
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
