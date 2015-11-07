@@ -44,7 +44,7 @@ main.on('click', 'select', function(e) {
     position: new Vector2(0, 65),
     size: new Vector2(144, 30),
     font: 'gothic-24-bold',
-    text: 'Text Anywhere!',
+    text: 'Android SDK test!',
     textAlign: 'center'
   });
   wind.add(textfield);
