@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="HERE-sdk-javadoc">
+    <CLASSES />
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/X2/app/libs/HERE-sdk-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
