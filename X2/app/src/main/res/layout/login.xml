@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:textColor="#ed2a23"
-        android:id="@+id/button"
+        android:id="@+id/loginButton"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
