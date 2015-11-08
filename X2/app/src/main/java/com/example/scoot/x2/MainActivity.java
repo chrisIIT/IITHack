@@ -24,15 +24,29 @@ public class MainActivity extends AppCompatActivity {
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
+<<<<<<< HEAD
 //            }
 //        });
     }
+=======
+                if (view.getId() == R.id.fab) //replace bID with the plus button
+                {
+                    Intent i = new Intent(MainActivity.this, Create.class);
+                    startActivity(i);
+                }
+            }
+        });
+    }
+
+
+
+>>>>>>> 58e402637be4c99ab052b4b96cf1576c5234b4b3
     public void addNewEvent(View v)
     {
         /*if (v.getId() == R.id.bID) //replace bID with the plus button
