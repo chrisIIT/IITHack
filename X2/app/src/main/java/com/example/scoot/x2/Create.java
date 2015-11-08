@@ -3,12 +3,15 @@ package com.example.scoot.x2;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 
 import java.lang.Math;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Scoot on 11/7/2015.
@@ -17,11 +20,17 @@ public class Create extends Activity {
     EditText name, description, date, location;
     String namex, descriptionx, datex, locationx;
      //int eventID = 0;
-
+    private List<Rendezvous> rs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            rs = extras.getParcelableArrayList("rendezvous");
+            System.out.println("made it to Create");
+        }
     }
 
     /*public int getEventID()
@@ -49,11 +58,18 @@ public class Create extends Activity {
         {
            // eventID++;
             setStrings(); //Needs to be here to make sure strings are gotten
-            Intent i = new Intent(this, MainActivity.class);
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
             //i.putExtra("newEID", eventID);
             //i.putExtra("rendezvous", new Rendezvous(namex, descriptionx, datex, locationx)); //better way then previous
+
+
             Rendezvous r = new Rendezvous(namex,descriptionx,datex,locationx); //create new Rendezvous object
-            i.putExtra("rendezvous",r);
+            rs.add(r);
+
+            Bundle bundle = new Bundle();
+            bundle.putParcelableArrayList("rendezvous", (ArrayList<? extends Parcelable>) rs);
+            i.putExtras(bundle);
+
             String oID = Integer.toString(r.getID());
             System.out.println(r);
             //RelativeLayout mRelativeLayout = (RelativeLayout)findViewById(R.id.relativeID);
@@ -71,6 +87,8 @@ public class Create extends Activity {
             //System.out.println("there");
             //e1.setY(900);
             //System.out.println("what");
+
+
             startActivity(i);
             //System.out.println("you suck");
         }

@@ -1,6 +1,8 @@
 package com.example.scoot.x2;
 
+import android.app.ActionBar;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -12,17 +14,40 @@ import android.content.Intent;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import 	android.view.ViewGroup.LayoutParams;
 
 import java.util.*;
 
-public class MainActivity extends AppCompatActivity {
 
+public class MainActivity extends AppCompatActivity {
+    private List<Rendezvous> rs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            rs = extras.getParcelableArrayList("rendezvous");
+
+//            LinearLayout ll = (LinearLayout)findViewById(R.id.buttonlayout);
+//
+//           for(int i = 0; i<rs.size();i++){
+//               Rendezvous r = rs.get(i);
+//               Button myButton = new Button(this);
+//               myButton.setText(r.getName());
+//
+//
+//           }
+
+
+            System.out.println("made it to MainActivity");
+        }else{
+            rs = new ArrayList<Rendezvous>();
+            System.out.println("created array");
+        }
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -31,10 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 if (view.getId() == R.id.fab) //replace bID with the plus button
                 {
                     Intent i = new Intent(MainActivity.this, Create.class);
+                    i.putParcelableArrayListExtra("rendezvous", (ArrayList<? extends Parcelable>) rs);
                     startActivity(i);
                 }
             }
         });
+
+
     }
 
     public void addNewEvent(View v)
@@ -51,9 +79,8 @@ public class MainActivity extends AppCompatActivity {
     //retrieve our rendezvous object
     //Rendezvous rendezvous = (Rendezvous)extras.getParcelable("rendezvous");
     //create List of objects
-    //List<Rendezvous> rs = new ArrayList<Rendezvous>();
-    Intent i = getIntent();
-    Rendezvous rendezvous = (Rendezvous)i.getSerializableExtra("rendezvous");
+   //Intent i = getIntent();
+   // Rendezvous rendezvous = (Rendezvous)i.getSerializableExtra("rendezvous");
 
 
 

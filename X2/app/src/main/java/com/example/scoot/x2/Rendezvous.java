@@ -4,11 +4,12 @@ import android.os.Parcelable;
 
 import java.io.Serializable;
 import java.lang.*;
+import java.lang.reflect.ParameterizedType;
 
 /**
  * Created by Scoot on 11/7/2015.
  */
-public class Rendezvous implements Serializable {
+public class Rendezvous implements Parcelable {
     private String name, description, date, location;
     private int ID = 0;
     public int objectID;
@@ -60,9 +61,9 @@ public class Rendezvous implements Serializable {
     public void setObjectID(int o) {
         objectID = o;
     }
-}
 
-    /*public int describeContents() {
+
+    public int describeContents() {
         return 0;
     }
     public Rendezvous(Parcel in)
@@ -76,7 +77,7 @@ public class Rendezvous implements Serializable {
     }
     public void writeToParcel(Parcel out, int flags) {
         out.writeStringArray(new String[]{this.name,this.description,this.date,this.location});
-        /*out.writeString(name);
+        out.writeString(name);
         out.writeString(description);
         out.writeString(date);
         out.writeString(location);
@@ -95,13 +96,13 @@ public class Rendezvous implements Serializable {
         }
     };
 }
-    public Rendezvous(Parcel in)
+  /*  public Rendezvous(Parcel in)
     {
         name = in.readString();
         description = in.readString();
         date = in.readString();
         location = in.readString();
-    }
+    } */
     //create an object of the data
     /*public Rendezvous (String name, String description, String date, String location)
     {

@@ -15,11 +15,47 @@
     <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_input_add" />
+        android:src="@android:drawable/ic_input_add"
+        android:nestedScrollingEnabled="false" />
 
- 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <EditText
+            android:id="@+id/rowno_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="RowNo"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/colno_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ColNo"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/build_btn_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Build" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*" >
+    </TableLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>
 
-<!-- From: file:/C:/Users/Scoot/IITHack/IITHack/X2/app/src/main/res/layout/activity_main.xml -->
+<!-- From: file:/Users/alexthompson/ASProject/ASP/IITHack/X2/app/src/main/res/layout/activity_main.xml -->
