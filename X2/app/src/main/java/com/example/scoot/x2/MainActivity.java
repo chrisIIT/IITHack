@@ -29,17 +29,39 @@ public class MainActivity extends AppCompatActivity {
 //        setSupportActionBar(toolbar);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
+            System.out.println("Fisrt crash?");
             rs = extras.getParcelableArrayList("rendezvous");
+            System.out.println("Fisrt crashed passed");
 
-//            LinearLayout ll = (LinearLayout)findViewById(R.id.buttonlayout);
-//
-//           for(int i = 0; i<rs.size();i++){
-//               Rendezvous r = rs.get(i);
-//               Button myButton = new Button(this);
-//               myButton.setText(r.getName());
-//
-//
-//           }
+            RelativeLayout layout = (RelativeLayout)findViewById(R.id.relativeID);
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT );
+
+
+           for(int i = 0; i<rs.size();i++){
+
+               Rendezvous r = rs.get(i);
+               Button btn = new Button(this);
+               btn.setText(r.getName());
+
+               btn.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
+               btn.setId(i);
+               System.out.println("Making buttons");
+               btn.setOnClickListener(new View.OnClickListener() {
+
+                   @Override
+                   public void onClick(View v) {
+
+
+                       Intent inten = new Intent(getApplicationContext(), EventData.class);
+                       inten.putParcelableArrayListExtra("rendezvous", (ArrayList<? extends Parcelable>) rs);
+                       startActivity(inten);
+                   }
+               });
+
+               layout.addView(btn);
+
+           }
 
 
             System.out.println("made it to MainActivity");
@@ -55,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (view.getId() == R.id.fab) //replace bID with the plus button
                 {
-                    Intent i = new Intent(MainActivity.this, Create.class);
+                    Intent i = new Intent(getApplicationContext(), Create.class);
                     i.putParcelableArrayListExtra("rendezvous", (ArrayList<? extends Parcelable>) rs);
                     startActivity(i);
                 }

@@ -66,9 +66,9 @@ public class Create extends Activity {
             Rendezvous r = new Rendezvous(namex,descriptionx,datex,locationx); //create new Rendezvous object
             rs.add(r);
 
-            Bundle bundle = new Bundle();
-            bundle.putParcelableArrayList("rendezvous", (ArrayList<? extends Parcelable>) rs);
-            i.putExtras(bundle);
+//            Bundle bundle = new Bundle();
+//            bundle.putParcelableArrayList();
+            i.putParcelableArrayListExtra("rendezvous", (ArrayList<? extends Parcelable>) rs);
 
             String oID = Integer.toString(r.getID());
             System.out.println(r);

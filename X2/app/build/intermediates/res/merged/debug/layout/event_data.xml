@@ -4,25 +4,213 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#a8b9b0">
 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Event Data"
+        android:id="@+id/createHeader"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/descID"
+        android:text="Description"
+        android:layout_below="@+id/nameID"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/createHeader"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:textAlignment="center"
+        android:id="@+id/dateID"
+        android:text="Date"
+        android:layout_below="@+id/descID"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/descID"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:textAlignment="center"
+        android:id="@+id/locID"
+        android:text="Location"
+        android:layout_below="@+id/dateID"
+        android:layout_alignParentStart="true"
+        android:textSize="15sp"
+        />
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context=".EventData" />
-    <!-- Map Fragment embedded with the map object -->
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableLayout1"
+        android:layout_width="374dp"
+        android:layout_height="140dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:textSize="18dp"
+                android:text="Friends"
+                android:gravity="center"
+                android:layout_span="6"></TextView>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:textAlignment="center"
+                android:id="@+id/TextView04"
+                android:text="Picture"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+            <TextView
+                android:textAlignment="center"
+                android:id="@+id/TextView03"
+                android:text="Name"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:width="60dp"
+                android:text="Going"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:typeface="serif"></TextView>
+            <TextView
+                android:textAlignment="center"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:id="@+id/TextView01"
+                android:text="ETA"
+                android:width="70dp"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:id="@+id/tableRow20"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_height="30dp"
+                android:text=" "
+                android:id="@+id/textView111"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:text="Elves Reyes"
+                android:id="@+id/textView3"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:text="     Going"
+                android:id="@+id/textView4"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:text="      45m"
+                android:id="@+id/textView5"
+                android:gravity="center"></TextView>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center">
+            <TextView
+                android:layout_height="30dp"
+                android:text=""
+                android:id="@+id/textView3123"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:text="Alex Thompson"
+                android:id="@+id/textView31"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:text="Going"
+                android:id="@+id/textView41"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:text="1h 12m"
+                android:id="@+id/textView51"
+                android:gravity="center"></TextView>
+
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow32"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:gravity="center">
+            <TextView
+                android:layout_height="30dp"
+                android:text=" "
+                android:id="@+id/textView3156"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:text="Chris Sanders"
+                android:id="@+id/textView312"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:text="Maybe"
+                android:id="@+id/textView412"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:text="N/A"
+                android:id="@+id/textView512"
+                android:gravity="center"></TextView>
+
+
+        </TableRow>
+    </TableLayout>
+    <!-- Map Fragment embedded with the map object
     <fragment
         class="com.here.android.mpa.mapping.MapFragment"
         android:id="@+id/mapfragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"/> -->
 
 </LinearLayout>
 <!-- From: file:/Users/alexthompson/ASProject/ASP/IITHack/X2/app/src/main/res/layout/event_data.xml -->

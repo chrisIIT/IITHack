@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:paddingLeft="5px"
-    android:paddingRight="0px">
+    android:paddingRight="0px"
+    android:background="#a8b9b0">
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,7 +56,7 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Done"
         android:id="@+id/doneButton"
@@ -63,6 +64,132 @@
         android:layout_centerHorizontal="true"
         android:onClick="goToEvents"
         android:nestedScrollingEnabled="true" />
+
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableLayout1"
+        android:layout_width="374dp"
+        android:layout_height="140dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:layout_below="@+id/locID"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/doneButton">
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:textSize="18dp"
+                android:text="Friends"
+                android:gravity="center"
+                android:layout_span="6"></TextView>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:textAlignment="center"
+                android:id="@+id/TextView04"
+                android:text="Picture"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+            <TextView
+                android:textAlignment="center"
+                android:id="@+id/TextView03"
+                android:text="          Name"
+                android:textStyle="bold"
+                android:typeface="serif"></TextView>
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:width="60dp"
+                android:text="        Invite"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:typeface="serif"></TextView>
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:id="@+id/tableRow20"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_height="30dp"
+                android:text=" "
+                android:id="@+id/textView111"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:text="              Elves Reyes"
+                android:id="@+id/textView3"
+                android:gravity="center"></TextView>
+            <ToggleButton
+                android:layout_height="30dp"
+                android:text=" "
+                android:id="@+id/textView4"
+                android:gravity="center"></ToggleButton>
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center">
+            <TextView
+                android:layout_height="30dp"
+                android:text=""
+                android:id="@+id/textView3123"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:text="Alex Thompson"
+                android:id="@+id/textView31"
+                android:gravity="center"></TextView>
+            <ToggleButton
+                android:layout_height="30dp"
+                android:text="Invite"
+                android:id="@+id/textView41"
+                android:gravity="center"></ToggleButton>
+
+
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow32"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:gravity="center">
+            <TextView
+                android:layout_height="30dp"
+                android:text=" "
+                android:id="@+id/textView3156"
+                android:gravity="center"></TextView>
+            <TextView
+                android:layout_height="30dp"
+                android:text="Chris Sanders"
+                android:id="@+id/textView312"
+                android:gravity="center"></TextView>
+            <ToggleButton
+                android:layout_height="30dp"
+                android:text="Invite"
+                android:id="@+id/textView412"
+                android:gravity="center"></ToggleButton>
+
+
+        </TableRow>
+    </TableLayout>
 
 </RelativeLayout>
 <!-- From: file:/Users/alexthompson/ASProject/ASP/IITHack/X2/app/src/main/res/layout/create.xml -->
