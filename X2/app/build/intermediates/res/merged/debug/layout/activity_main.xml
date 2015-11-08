@@ -17,27 +17,7 @@
         android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_input_add" />
 
-    <TableLayout
-        android:id="@+id/tableLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-
-        <TableRow
-            android:id="@+id/display_row"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal" >
-
-            <TextView
-                android:id="@+id/tableTitle"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Events"
-                android:textSize="18dp" >
-            </TextView>
-        </TableRow>
-    </TableLayout>
+ 
 
 
 </android.support.design.widget.CoordinatorLayout>
