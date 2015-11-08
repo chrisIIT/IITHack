@@ -7,14 +7,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-<<<<<<< HEAD
+
     tools:showIn="@layout/activity_main" tools:context=".MainActivity"
     android:id="@+id/relativeID">
-=======
-    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+
+    <!--tools:showIn="@layout/activity_main" tools:context=".MainActivity">-->
 
     <TextView android:layout_width="wrap_content"
         android:layout_height="match_parent" />
->>>>>>> 58e402637be4c99ab052b4b96cf1576c5234b4b3
 
 </RelativeLayout>
