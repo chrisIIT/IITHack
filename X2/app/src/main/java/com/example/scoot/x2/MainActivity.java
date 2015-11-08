@@ -46,12 +46,15 @@ public class MainActivity extends AppCompatActivity {
         }*/
     }
     //retrieve our eventID
-    Bundle extras = getIntent().getExtras();
+    //Bundle extras = getIntent().getExtras();
     //int eventID = extras.getInt("newEID");
     //retrieve our rendezvous object
-    Rendezvous rendezvous = (Rendezvous)extras.getParcelable("rendezvous");
+    //Rendezvous rendezvous = (Rendezvous)extras.getParcelable("rendezvous");
     //create List of objects
     //List<Rendezvous> rs = new ArrayList<Rendezvous>();
+    Intent i = getIntent();
+    Rendezvous rendezvous = (Rendezvous)i.getSerializableExtra("rendezvous");
+
 
 
     @Override

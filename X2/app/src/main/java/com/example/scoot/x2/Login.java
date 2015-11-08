@@ -20,7 +20,7 @@ public class Login extends Activity {
     {
         if (v.getId() == R.id.loginButton) //replace bID with the plus button
         {
-            Intent i = new Intent(Login.this, Create.class);
+            Intent i = new Intent(Login.this, MainActivity.class);
             startActivity(i);
         }
     }

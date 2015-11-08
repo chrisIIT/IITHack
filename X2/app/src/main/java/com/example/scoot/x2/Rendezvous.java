@@ -2,17 +2,18 @@ package com.example.scoot.x2;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.io.Serializable;
 import java.lang.*;
 
 /**
  * Created by Scoot on 11/7/2015.
  */
-public class Rendezvous implements Parcelable {
+public class Rendezvous implements Serializable {
     private String name, description, date, location;
     private int ID = 0;
     public int objectID;
-    public Rendezvous(String name, String description, String date, String location)
-    {
+
+    public Rendezvous(String name, String description, String date, String location) {
         this.name = name;
         this.description = description;
         this.date = date;
@@ -20,47 +21,48 @@ public class Rendezvous implements Parcelable {
         this.objectID = ++ID;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
-    public String getDescription()
-    {
+
+    public String getDescription() {
         return description;
     }
-    public String getDate()
-    {
+
+    public String getDate() {
         return date;
     }
-    public String getLocation()
-    {
+
+    public String getLocation() {
         return location;
     }
-    public int getID()
-    {
+
+    public int getID() {
         return objectID;
     }
-    public void setName(String na)
-    {
+
+    public void setName(String na) {
         name = na;
     }
-    public void setDescription(String d)
-    {
+
+    public void setDescription(String d) {
         description = d;
     }
-    public void setDate(String da)
-    {
+
+    public void setDate(String da) {
         date = da;
     }
-    public void setLocation(String loc)
-    {
+
+    public void setLocation(String loc) {
         location = loc;
     }
-    public void setObjectID(int o)
-    {
+
+    public void setObjectID(int o) {
         objectID = o;
     }
-    public int describeContents() {
+}
+
+    /*public int describeContents() {
         return 0;
     }
     public Rendezvous(Parcel in)
@@ -77,7 +79,7 @@ public class Rendezvous implements Parcelable {
         /*out.writeString(name);
         out.writeString(description);
         out.writeString(date);
-        out.writeString(location);*/
+        out.writeString(location);
     }
 
     public static final Parcelable.Creator<Rendezvous> CREATOR = new Parcelable.Creator()
@@ -93,13 +95,13 @@ public class Rendezvous implements Parcelable {
         }
     };
 }
-    /*public Rendezvous(Parcel in)
+    public Rendezvous(Parcel in)
     {
         name = in.readString();
         description = in.readString();
         date = in.readString();
         location = in.readString();
-    }*/
+    }
     //create an object of the data
     /*public Rendezvous (String name, String description, String date, String location)
     {
