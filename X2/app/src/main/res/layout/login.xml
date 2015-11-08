@@ -37,7 +37,7 @@
 
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
         android:textColor="#ed2a23"
@@ -45,6 +45,16 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:onClick="goToEvents" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="#232aed"
+        android:id="@+id/registerButton"
+        android:onClick="goToEvents"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
 
 
