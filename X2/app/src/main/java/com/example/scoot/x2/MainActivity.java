@@ -9,6 +9,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,9 +31,8 @@ public class MainActivity extends AppCompatActivity {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
 //            }
-//        })x;
+//        });
     }
-
     public void addNewEvent(View v)
     {
         /*if (v.getId() == R.id.bID) //replace bID with the plus button
@@ -37,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }*/
     }
+    //retrieve our eventID
+    Bundle extras = getIntent().getExtras();
+    //int eventID = extras.getInt("newEID");
+    //retrieve our rendezvous object
+    Rendezvous rendezvous = (Rendezvous)extras.getParcelable("rendezvous");
+    //create List of objects
+    //List<Rendezvous> rs = new ArrayList<Rendezvous>();
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
