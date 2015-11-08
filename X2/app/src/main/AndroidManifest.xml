@@ -19,9 +19,35 @@
             </intent-filter>
         </activity>
 
+        <meta-data android:name="com.here.android.maps.appid"
+            android:value="D3jyp86xw04bKr4VCfxo"/>
+        <meta-data android:name="com.here.android.maps.apptoken"
+            android:value="hNs9QOOHockpc7qgEvbF1w"/>
+        <meta-data android:name="com.here.android.maps.license.key"
+            android:value="Vu+WG5khgDp3cHa4yrn7VdwOTHuac3qxpXtME0P8VergFRvP4aTHZ836APT42bgH/Jt5G4IjBsEuuazzibinlj7gE35t0bv7CuYSfz6M6zUOKC6934PU0rdZAgWXmz3T7tQ0AgWl6a8pnEjMCAjemPaA1PDE8jjJcX6187d3oVxIvp+vVgYzaaA3zttcg7eaF9rim8srohWC3LxpQIrieLq5yE17qVV2eXvYC4Tft3+X0ZBa7qMX+/KhtClS5Xid7UQR2wXEoF6gUlMBw0EfPpnt5fodczDZcdayujXwdTCRXs+rULQJIJefHASn6fpFG1kzN6z70kN6XqkilnBCJjjC0GNuR1O9YQqiNjSnTUqqJaVfJAP2yoOVkcTg8fiQqYagO4FkMimRtTJEo3frxDYERZ8GBCcwHaiOOcY08JkzTnw7AqqHiShLCw5guCUFg7uGnCvo+fOKSpU60Iz3AGhUQ2GP/5z9typccsf1mkp13uIYdkdOs+TtqWFNnG8pnAaiFNgL2GP4tDIMFTFXHER4JADl1P2Tj3ZH/OUSgS2VGnW1ZZBye4SGf0irXDn3guhF2AHT/V5jjv1w+VK35JjgaCdAwmFB949lOITmUecgsr1PjKDKIry0jpqOXLzLSQrosWLMXmJ+zPPSMIKIDql/Jacsio7Thd6QecTP4qM=
+"/>
+
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".Create"></activity>
         <activity android:name=".EventData"></activity>
+
+        <service
+            android:name="com.here.android.mpa.service.MapService"
+            android:label="HereMapService"
+            android:process="global.Here.Map.Service.v2"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.here.android.mpa.service.MapService" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+        <uses-permission android:name="android.permission.INTERNET"/>
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     </application>
 
 </manifest>
